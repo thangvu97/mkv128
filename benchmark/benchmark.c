@@ -1,9 +1,4 @@
-/*
- * Reproducible MKV-128 ECB comparison across the direct implementation,
- * scalar T-tables, 8-way AVX2 and 16-way AVX-512. The direct control and every
- * optimized configuration are measured in one process and checked against the
- * same full reference ciphertext.
- */
+
 
 #ifndef _WIN32
 #error "This benchmark requires Windows timers and worker threads."
