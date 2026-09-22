@@ -9,11 +9,7 @@
 extern "C" {
 #endif
 
-/*
- * Direct implementation used as a fair no-T-table control.  The ordinary
- * 256-byte substitution box is generated from the MKV A-construction once;
- * MixWords is evaluated directly in GF(2^8) for every encrypted block.
- */
+
 typedef struct mkv128_reference_ctx {
     uint32_t round_keys[MKV128_KEY_WORDS];
     uint8_t sbox[256];
