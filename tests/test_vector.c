@@ -1,21 +1,4 @@
-/*
- * test_vector.c - ba phuong an ma hoa MKV-128 trong mot tep duy nhat.
- *
- * Ba ham trien khai duoc dung trong main:
- *   1) mkv128_encrypt_direct : S-box va MixWords tinh truc tiep.
- *   2) mkv128_encrypt_ttable : S-box va MixWords da gop vao bang tra T.
- *   3) mkv128_encrypt_avx512 : 16 khoi song song bang AVX-512 gather.
- *
- * Ma tran, S-box va bang T duoc sinh khi chuong trinh khoi dong; khong can
- * them PrecomputedTable128.h hay bat ky tep nguon nao khac de bien dich.
- * Nhanh thu ba la AVX-512 T-table: no van dung cung bang T, nhung doc 16
- * khoi va thuc hien cac phep XOR tren 16 lanh vector trong mot vong.
- * Neu CPU khong co AVX-512, ham tu dong dung lai phuong an bang T de van
- * cho ra ket qua dung.
- *
- * Bien dich tren Windows/MSYS2:
- *   gcc -std=c11 -O3 -march=znver4 tests/test_vector.c -o test_vector.exe
- */
+
 
 #include <stdint.h>
 #include <ctype.h>
